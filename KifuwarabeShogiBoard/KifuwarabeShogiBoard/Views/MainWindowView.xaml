@@ -75,6 +75,9 @@
             </Button.RenderTransform>
         </Button>
 
+        <!-- ウィンドウを動かすためのハンドル -->
+        <local:WindowMoveHandleUserControlView Width="50" Height="52" Margin="250,-300,0,0"/>
+
         <!-- タイトル -->
         <Label Grid.Row="1" Height="96" Margin="0,-400,0,0" FontSize="64"
                Content="きふわらべの将棋盤"

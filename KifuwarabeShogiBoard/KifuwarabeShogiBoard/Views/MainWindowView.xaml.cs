@@ -17,5 +17,15 @@
             // ウィンドウを閉じます
             this.Close();
         }
+
+        private void WindowMoveHandle_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Rectangle_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
