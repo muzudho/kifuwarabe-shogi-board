@@ -26,30 +26,49 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- 四角 -->
-                        <Rectangle Grid.RowSpan="2" Grid.ColumnSpan="2"
-                               Width="50" Height="50"
-                               Fill="{TemplateBinding Background}"/>
+                        <Rectangle Name="box"
+                                   Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                   Width="50" Height="50"
+                                   Fill="{TemplateBinding Background}"/>
 
                         <!-- 境界線 -->
-                        <Border Grid.RowSpan="2" Grid.ColumnSpan="2"
-                            HorizontalAlignment="Left" VerticalAlignment="Top"
-                            Width="50" Height="50"
-                            BorderThickness="4"
-                            BorderBrush="{TemplateBinding Foreground}"/>
+                        <Border Name="border"
+                                Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                HorizontalAlignment="Left" VerticalAlignment="Top"
+                                Width="50" Height="50"
+                                BorderThickness="4"
+                                BorderBrush="{TemplateBinding Foreground}"/>
 
                         <!-- 丸 -->
-                        <Ellipse Width="15" Height="15"
+                        <Ellipse Name="circle1"
+                                 Width="15" Height="15"
+                                Fill="{TemplateBinding Foreground}"/>
+                        <Ellipse Name="circle2"
+                                 Grid.Column="1"
+                                Width="15" Height="15"
                              Fill="{TemplateBinding Foreground}"/>
-                        <Ellipse Grid.Column="1"
-                             Width="15" Height="15"
-                             Fill="{TemplateBinding Foreground}"/>
-                        <Ellipse Grid.Row="1"
-                             Width="15" Height="15"
-                             Fill="{TemplateBinding Foreground}"/>
-                        <Ellipse Grid.Row="1" Grid.Column="1"
-                             Width="15" Height="15"
-                             Fill="{TemplateBinding Foreground}"/>
+                        <Ellipse Name="circle3"
+                                 Grid.Row="1"
+                                Width="15" Height="15"
+                                Fill="{TemplateBinding Foreground}"/>
+                        <Ellipse Name="circle4"
+                                 Grid.Row="1" Grid.Column="1"
+                                Width="15" Height="15"
+                                Fill="{TemplateBinding Foreground}"/>
                     </Grid>
+
+                    <!-- ここにトリガーを並べてください -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="box" Property="Fill" Value="SkyBlue"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="LightBlue"/>
+                            <Setter TargetName="circle1" Property="Fill" Value="LightBlue"/>
+                            <Setter TargetName="circle2" Property="Fill" Value="LightBlue"/>
+                            <Setter TargetName="circle3" Property="Fill" Value="LightBlue"/>
+                            <Setter TargetName="circle4" Property="Fill" Value="LightBlue"/>
+                        </Trigger>
+                        
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Button.Template>
         </Button>
