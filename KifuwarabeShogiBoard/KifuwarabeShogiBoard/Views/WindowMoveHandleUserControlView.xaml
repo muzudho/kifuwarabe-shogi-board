@@ -59,6 +59,7 @@
 
                     <!-- ここにトリガーを並べてください -->
                     <ControlTemplate.Triggers>
+                        <!-- マウスカーソルがコントロールに重なったとき -->
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="box" Property="Fill" Value="SkyBlue"/>
                             <Setter TargetName="border" Property="BorderBrush" Value="LightBlue"/>
@@ -67,7 +68,17 @@
                             <Setter TargetName="circle3" Property="Fill" Value="LightBlue"/>
                             <Setter TargetName="circle4" Property="Fill" Value="LightBlue"/>
                         </Trigger>
-                        
+
+                        <!-- マウスが押下されたとき -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="box" Property="Fill" Value="Yellow"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="LightYellow"/>
+                            <Setter TargetName="circle1" Property="Fill" Value="LightYellow"/>
+                            <Setter TargetName="circle2" Property="Fill" Value="LightYellow"/>
+                            <Setter TargetName="circle3" Property="Fill" Value="LightYellow"/>
+                            <Setter TargetName="circle4" Property="Fill" Value="LightYellow"/>
+                        </Trigger>
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Button.Template>
